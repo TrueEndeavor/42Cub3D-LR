@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3D.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rogalio <rmouchel@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 12:00:14 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 18:37:52 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:06:01 by rogalio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@
 # include <X11/keysym.h>
 # include "mlx.h"
 # include <math.h>
-# include <stdio.h> // to be deleted later
 
 /* *****************************   CONSTANTS   *******************************/
 # define NORTH 1
