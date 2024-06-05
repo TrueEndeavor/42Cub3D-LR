@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:13:51 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 12:47:40 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:53:52 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	on_keypress(int key, t_data *data)
 	if (key == 65307)
 	{
 		on_destroy(data);
+		printf("...calling destroy\n");
 		exit(0);
 	}
 	if (key == 119)

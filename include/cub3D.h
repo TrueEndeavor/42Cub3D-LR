@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 12:00:14 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 13:10:38 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:34:28 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -239,5 +239,7 @@ char				*get_error_message(int error_code);
 void				print_colors(t_data *data);
 void				print_content(void *c);
 void				print_map(t_data *data);
+bool				is_invalid_line(char *line);
+void				basic_check(t_data *data, char *line);
 
 #endif

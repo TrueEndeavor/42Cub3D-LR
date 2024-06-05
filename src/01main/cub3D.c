@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 12:36:05 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/04 09:24:16 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:47:46 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ int	main(int ac, char **av)
 
 	handle_args(ac);
 	init_and_parse(&data, av[1]);
-	printf("map height and width = %d x %d\n", data.map_height, data.map_width);
 	initialize_mlx(&data);
 	setup_hooks(&data);
 	mlx_loop(data.mlx_ptr);

@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 14:10:26 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/04 09:56:39 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:04:59 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,9 @@ int	set_map(t_data *data, t_list *current)
 		if (current->content)
 			data->dup_map[i] = ft_strdup(current->content);
 		if (!data->dup_map[i])
+		{
 			display_error("Could not duplicate map");
+		}
 		j = 0;
 		while (ft_iswhitespace(data->dup_map[i][j]))
 			j++;

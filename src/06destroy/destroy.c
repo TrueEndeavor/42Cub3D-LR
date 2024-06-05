@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 11:51:43 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/03 17:46:05 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:04:01 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	free_maps(t_data *data)
 	t_list	*current;
 	t_list	*next;
 
+	if (data->dup_map)
+		free_dup_map(data);
 	if (data->map)
 	{
 		current = data->map;
@@ -42,8 +44,6 @@ void	free_maps(t_data *data)
 			current = next;
 		}
 	}
-	if (data->dup_map)
-		free_dup_map(data);
 }
 
 void	free_textures(t_data *data)

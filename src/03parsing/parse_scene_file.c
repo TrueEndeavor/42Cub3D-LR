@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 13:49:07 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/04 12:44:18 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 14:39:00 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	process_map_line(char *line, t_data *data)
 			}
 		}
 	}
+	else
+		display_error("Invalid char(s) in map");
 	return (1);
 }
 
@@ -68,6 +70,13 @@ void	process_line(t_data *data, char *line, bool *flags)
 		{
 			free(line);
 			return ;
+		}
+		if (is_invalid_line(line))
+		{
+			display_error("Unknown texture/color line format");
+			on_destroy(data);
+			free(line);
+			exit(EXIT_FAILURE);
 		}
 		if (is_texture_line(line) || is_color_line(line))
 			process_texture_or_color(line, data, flags);
