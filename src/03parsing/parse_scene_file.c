@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 13:49:07 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 14:39:00 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:13:30 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ int	process_map_line(char *line, t_data *data)
 			}
 		}
 	}
-	else
-		display_error("Invalid char(s) in map");
 	return (1);
 }
 
