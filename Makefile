@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rogalio <rmouchel@student.42.fr>           +#+  +:+       +#+         #
+#    By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 13:43:15 by lannur-s          #+#    #+#              #
-#    Updated: 2024/06/04 15:42:39 by rogalio          ###   ########.fr        #
+#    Updated: 2024/06/05 13:09:52 by lannur-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS			=	src/01main/cub3D.c \
 					src/07error/error_handling.c \
 					src/03parsing/load_map.c \
 					src/dev/print_debug.c	\
+					src/dev/print_debug1.c	\
 					src/04mapvalidation/duplicate_map.c \
 					src/04mapvalidation/valid_map_utils.c \
 					src/06destroy/destroy.c \
@@ -59,7 +60,7 @@ SRCS			=	src/01main/cub3D.c \
 					src/05raycasting/rotate.c \
 					src/05raycasting/draw.c
 
-OBJS_DIR = obs
+OBJS_DIR = obj
 OBJS = $(SRCS:src/%.c=$(OBJS_DIR)/%.o)
 
 $(NAME): $(LIBFT_DIR)/$(LIBFTNAME) $(OBJS)

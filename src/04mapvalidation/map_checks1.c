@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_checks1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rogalio <rmouchel@student.42.fr>           +#+  +:+       +#+        */
+/*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:11:01 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/04 16:34:27 by rogalio          ###   ########.fr       */
+/*   Updated: 2024/06/05 11:25:15 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_map_size(t_data *data)
 {
-	if (ft_lstsize(data->map) <=0)
+	if (ft_lstsize(data->map) <= 0)
 	{
 		display_error("Missing map info");
 		return (0);
