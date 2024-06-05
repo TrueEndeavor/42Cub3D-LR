@@ -6,28 +6,11 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/30 13:49:07 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 15:13:30 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:55:06 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
-
-void	parse_line(char *line, t_data *data, bool *tex_flag, bool *col_flag)
-{
-	if (line == NULL)
-		return ;
-	trim_whitespace(&line);
-	if (is_texture_line(line))
-	{
-		parse_texture_line(line, &data->textures);
-		*tex_flag = true;
-	}
-	else if (is_color_line(line))
-	{
-		parse_color_line(line, &data->colors);
-		*col_flag = true;
-	}
-}
 
 int	process_map_line(char *line, t_data *data)
 {
@@ -49,11 +32,6 @@ int	process_map_line(char *line, t_data *data)
 	return (1);
 }
 
-void	process_texture_or_color(char *line, t_data *data, bool *flags)
-{
-	parse_line(line, data, &flags[1], &flags[2]);
-}
-
 void	process_line(t_data *data, char *line, bool *flags)
 {
 	if (!line)
@@ -64,18 +42,7 @@ void	process_line(t_data *data, char *line, bool *flags)
 	trim_newline(line);
 	if (!flags[0])
 	{
-		if (ft_strlen(line) == 0)
-		{
-			free(line);
-			return ;
-		}
-		if (is_invalid_line(line))
-		{
-			display_error("Unknown texture/color line format");
-			on_destroy(data);
-			free(line);
-			exit(EXIT_FAILURE);
-		}
+		check_basic(data, line);
 		if (is_texture_line(line) || is_color_line(line))
 			process_texture_or_color(line, data, flags);
 		else if (is_map_line(line))

@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:13:51 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 14:53:52 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 18:32:08 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	on_keypress(int key, t_data *data)
 	if (key == 65307)
 	{
 		on_destroy(data);
-		printf("...calling destroy\n");
 		exit(0);
 	}
 	if (key == 119)
@@ -65,7 +64,7 @@ int	on_mouse(int x, int y, t_data *data)
 
 	(void)data;
 	(void)y;
-	rot_speed = 0.05;
+	rot_speed = 0.02;
 	if (last_x == 0)
 		last_x = x;
 	diff_x = x - last_x;

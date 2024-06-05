@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 12:00:14 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/05 14:34:28 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 18:37:52 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@
 # define CEILING 1
 # define FLOOR 2
 
-/* # define WIN_WIDTH 960 */
-/* # define WIN_HEIGHT 720 */
 # define WIN_WIDTH 640
-# define WIN_HEIGHT 480
+# define WIN_HEIGHT 420
 
 # define ERR_TEXTURE_MISSING_OR_DUPLICATED 11
 # define ERR_COLOR_MISSING_OR_DUPLICATED 12
@@ -233,6 +231,10 @@ char				check_next_move(t_data *data, int x, int y);
 void				check_collected(t_data *data, int x, int y);
 int					on_destroy(t_data *data);
 void				free_maps(t_data *data);
+void				basic_check(t_data *data, char *line);
+void				parse_line(char *l, t_data *d, bool *tflag, bool *cflag);
+void				process_texture_or_color(char *l, t_data *d, bool *f);
+void				check_basic(t_data *data, char *line);
 void				destroy_images(t_data *data);
 int					display_error(char *str);
 char				*get_error_message(int error_code);
@@ -240,6 +242,5 @@ void				print_colors(t_data *data);
 void				print_content(void *c);
 void				print_map(t_data *data);
 bool				is_invalid_line(char *line);
-void				basic_check(t_data *data, char *line);
 
 #endif

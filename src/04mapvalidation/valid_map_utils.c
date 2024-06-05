@@ -6,7 +6,7 @@
 /*   By: lannur-s <lannur-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 15:05:12 by lannur-s          #+#    #+#             */
-/*   Updated: 2024/06/03 21:03:26 by lannur-s         ###   ########.fr       */
+/*   Updated: 2024/06/05 18:12:12 by lannur-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	initialize_world_map(t_data *data, int i, int j)
 		data->world_map[i][j] = 0;
 	}
 	else
-		data->world_map[i][j] = 0;
+		data->world_map[i][j] = 1;
 }
 
 void	convert_to_intarray(t_data *data)
